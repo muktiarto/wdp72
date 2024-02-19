@@ -84,7 +84,8 @@ body
     height: 20px;
     background-color: blue;
     padding: 10px;
-    margin: 10px 10px 20px 0px;
+    border: 2px solid blue;
+    margin: 10px 10px 10px 0px;
 }
 
 .Contact
@@ -98,15 +99,8 @@ body
     background-color: black;
     transition: .3s ease-in-out;
     transition-delay: .3s;
+    border: 2px solid black;
     border-radius: 8px;
-}
-
-.link-contact:hover
-{
-    background-color: black;
-    transition: .3s ease-in-out;
-    transition-delay: .3s;
-    border: none;
 }
 
 .link-contact
@@ -121,7 +115,7 @@ body
     background-color: #fff;
     padding: 10px;
     border: 2px solid #22923c;
-    margin: 10px 10px 0px 0px;
+    margin: 10px 10px 10px 0px;
 }
 
 .Resume
