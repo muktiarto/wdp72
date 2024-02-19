@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1 id="judul">Judul Konten</h1>
+        <P id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quam. Asperiores, nulla eos alias repellat
+            placeat et sint perferendis porro laboriosam, error iure, aspernatur est beatae sed maiores dolore
+            blanditiis.</P>
+        <ul>
+            <li class="konten">Konten 1</li>
+            <li class="konten">Konten 2</li>
+            <li class="konten">Konten 3</li>
+        </ul>
+    </div>
+
+    <button onclick="gantiJudul()">Edit</button>
+    <br>
+    <input type="text" id="inputJudul" value="test" />
+    <br>
+    <button onclick="simpanJudul()">Simpan</button>
+
+    <script>
+        const title = document.querySelector("#judul");
+        const inputTitle = document.querySelector("#inputJudul");
+        const content = document.querySelectorAll(".konten");
+
+        function gantiJudul() {
+            inputTitle.value = title.innerHTML;
+        }
+
+        function simpanJudul() {
+            title.innerHTML = inputTitle.value;
+        }
+
+        content.forEach((element) => {
+            Element.innerHTML = "Konten Baru";
+        });
+
+        const paragraf = document.createElement("p");
+        paragraf.innerHTML = 'Ini paragraf tambahan';
+
+        const newtitle = document.createElement("h1");
+        newtitle.innerHTML = "Ini Judul Baru";
+
+        const container = document.querySelector("#container");
+        container.appendChild(newtitle);
+        container.appendChild(paragraf);
+
+        const hilang = document.querySelector("#par");
+        hilang.remove();
+
+
+    </script>
+</body>
+
+</html>

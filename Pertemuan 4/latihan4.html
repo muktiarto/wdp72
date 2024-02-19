@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">A</a></li>
+                            <li><a class="dropdown-item" href="#">B</a></li>
+                            <li><a class="dropdown-item" href="#">C</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="bg-secondary text-white-50 mb-5">
+        <div class="container">
+            <div class="row p-3">
+                <div class="col-md-2 text-md-center pb-2 pb-md-0"> <a href="#" class="text-white ml-2">
+                        <img src="data:image/png;base64,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"
+                            width="50%" height="50%" alt="">
+                    </a>
+                </div>
+                <div class="col-md-2 text-md-center pb-2 pb-md-0"> <a href="#" class="text-white ml-2"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Mitsubishi-logo.png"
+                            width="50%" height="50%" alt=""></a>
+                </div>
+                <div class="col-md-2 text-md-center pb-2 pb-md-0"> <a href="#" class="text-white ml-2"><img src="https://www.freeiconspng.com/thumbs/honda-logo-png/honda-logo-transparent-background-0.jpg"
+                    width="50%" height="50%" alt=""></a>
+                </div>
+                <div class="col-md-2 text-md-center pb-2 pb-md-0"> <a href="#" class="text-white ml-2"><img src="https://i.pinimg.com/originals/e1/34/06/e134063bcdee260fcb8f76d93dab2d56.png"
+                    width="50%" height="50%" alt=""></a></a>
+                </div>
+                <div class="col-md-2 text-md-center pb-2 pb-md-0"> <a href="#" class="text-white ml-2"><img src="https://i.pinimg.com/736x/9b/98/fe/9b98fe7973d0cb009e68fee1a586417a.jpg"
+                    width="50%" height="50%" alt=""></a></a></a>
+                </div>
+                <div class="col-md-2 text-md-center pb-2 pb-md-0"> <a href="#" class="text-white ml-2"><img src="https://www.freepnglogos.com/uploads/mercedes-logo-png/mercedes-logo-mercedes-benz-logo-png-transparent-svg-vector-bie-13.png"
+                    width="50%" height="50%" alt=""></a></a></a></a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="bg-llight row p-4">
+        <div class="col-md-12 text-md-center pb-2 pb-md-0"> <a href="#" class="text-blue ml-2">
+                <h1>About Us</h1>
+            </a>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <!-- About Us 1 -->
+                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure a consequatur molestias unde fugit
+                    numquam dolore, officia itaque sequi minima? Explicabo ad quam nostrum minus doloremque dolorem
+                    similique, aut veniam?</h2>
+            </div>
+            <div class="col-md-6 mb-5">
+                <!-- About Us 2 -->
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas facere numquam, dolor
+                    consequatur alias. Dolores consectetur aliquid voluptatibus reprehenderit animi voluptas vel, quos
+                    vero excepturi enim amet, rerum sint!</h3>
+                <button type="button" class="btn btn-outline-primary">Learn More</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <!-- Detail 1 -->
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Text Dropdown #1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo numquam
+                                    inventore modi quam ipsa error dolorem nobis, voluptatibus eos. Odit magni neque,
+                                    numquam dignissimos corrupti similique atque molestias provident ut.</p1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Text Dropdown #2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur tenetur
+                                    voluptates aperiam neque inventore rem explicabo, fuga culpa. Facilis eius aliquam
+                                    illo nesciunt dolores nobis qui, beatae rerum ullam praesentium?</p1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Text Dropdown #3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure impedit sapiente saepe
+                                    et quidem reprehenderit cum obcaecati asperiores incidunt pariatur eius atque vero
+                                    debitis, eos expedita tenetur. In, cumque est!</p1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Detail 2 -->
+                <img src="https://www.pngall.com/wp-content/uploads/8/Work-PNG-Clipart.png" width="100%" height="100%"
+                    alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-5">
+                <!-- skills 1 -->
+                <img src="https://freepngimg.com/save/40041-graph-image-png-file-hd/960x640" width="200px"
+                    height="200px" alt="">
+            </div>
+            <div class="col-md-6">
+                <!-- skills 2 -->
+                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui est unde officiis molestias
+                    deleniti ad sint, debitis placeat fuga laudantium exercitationem architecto quo commodi nisi, iusto
+                    nostrum dolores fugit.</h3>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
