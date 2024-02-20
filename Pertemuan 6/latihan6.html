@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6</title>
+</head>
+
+<body>
+    <form action="index.html">
+        <input type="text" />
+        <input type="submit" value="save" onclick="editHasil()" />
+    </form>
+    <h1 id="hasil"></h1>
+    <h1 id="perkalian"></h1>
+
+    <button onclick="editHasil()">Edit</button>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+
+    <script>
+        function perkalian(a, b) {
+            return a * b;
+        }
+
+        document.getElementById("hasil").innerHTML = perkalian(4, 2);
+        document.getElementById("perkalian").innerHTML = perkalian(4, 2);
+
+        function editHasil() {
+            event.preventDefault();
+            document.getElementById("hasil").innerHTML = "Test";
+        }
+    </script>
+</body>
+
+</html>
