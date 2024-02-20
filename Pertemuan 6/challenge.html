@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 6</title>
+</head>
+<body>
+    <form id="angka">
+    <input type="text" id="input1" value="" />
+    <br/>
+    <input type="text" id="input2" value="" />
+    <br/>
+    </form>
+    <button onclick="perkalian()">X</button>
+    <button onclick="pembagian()">:</button>
+    <button onclick="penambahan()">+</button>
+    <button onclick="pengurangan()">-</button>
+    <hr/>
+    <h1>HASIL</h1>
+    <div id="result"></div>
+
+
+    <script>
+
+    function perkalian() 
+        {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            var result = a * b;
+            document.getElementById('result').innerText = 'Hasil: ' + result;
+        }
+
+    function pembagian()
+        {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            var result = a / b;
+            document.getElementById('result').innerText = 'Hasil: ' + result;
+        }
+
+    function penambahan()
+    {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            var result = a + b;
+            document.getElementById('result').innerText = 'Hasil: ' + result;
+    }
+
+    function pengurangan()
+    {
+            let a = parseFloat(document.getElementById('input1').value);
+            let b = parseFloat(document.getElementById('input2').value);
+            var result = a - b;
+            document.getElementById('result').innerText = 'Hasil: ' + result;
+    }
+
+    </script>
+    
+</body>
+</html>
