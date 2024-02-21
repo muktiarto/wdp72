@@ -48,12 +48,13 @@ body
     text-decoration: none;
 }
 
-.gambar
+.konten-total
 {
     display: flex;
     background-color: antiquewhite;
     margin: 20px;
     padding: 20px;
+    border-radius: 8px;
 }
 
 /* KOLOM 1 */
@@ -78,18 +79,23 @@ body
     display: flex;
 }
 
-
-.Edit
+.kotak1
 {
     width: 50px;
     height: 20px;
     background-color: blue;
     padding: 10px;
-    text-decoration: none;
     border: 2px solid blue;
     margin: 10px 10px 10px 0px;
+}
+
+.Contact
+{
+    color: white;
+    padding: 10px;
 
 }
+
 
 .kotak1:hover
 {
@@ -140,11 +146,14 @@ body
 {
     background-color: white;
     margin: 20px;
+    border-radius: 8px;
+    padding: 8px;
 }
 
 .baris-nama h3
 {
     font-size: 20px;
+    padding: 8px;
 }
 
 

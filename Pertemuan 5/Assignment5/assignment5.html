@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Pertemuan 1</title>
+    <title>Latihan 5</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -35,7 +35,7 @@
 
         <!-- KOLOM 1 -->
 
-        <div class="gambar">
+        <div class="konten-total">
             <img src="Picture/user.png" class="kolom1" />
 
             <!-- KOLOM 2 -->
@@ -44,9 +44,11 @@
                 <h1>Nama Anda</h1>
                 <p1>Front End Designer</p1>
                 <div class="all-kotak">
-                <div class="kotak1">
-                    <button class="Edit" onclick="gantikonten()">Edit</button>
-                </div>
+                    <a href="kontak.html" target="_blank" class="link-contact">
+                        <div class="kotak1">
+                            <p1 onclick="gantikonten()" class="Contact">Edit</p1>
+                        </div>
+                    </a>
                     <div class="kotak2">
                         <p1 class="Resume">Resume</p1>
                     </div>
@@ -103,7 +105,6 @@
                 <h4>SUBMIT</h4>
             </div>
         </div>
-        <button class="Edit" onclick="kembali()">Kembali</button>
     </div>
 
 <!-- SCRIPT -->
@@ -113,11 +114,6 @@
         function gantikonten() 
         {
             document.getElementById('konten1').innerHTML='konten2'
-        }
-
-        function kembali()
-        {
-            document.getElementById('konten2').innerHTML='konten1'
         }
         
     </script>
