@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    // Fungsi untuk memeriksa password
+    function checkPassword() {
+        // Menggunakan prompt untuk mengambil input password dari pengguna
+        var userInput = prompt("Masukkan password:");
+
+        // Password yang benar (dalam contoh ini adalah "password123")
+        var correctPassword = "password123";
+
+        // Memeriksa apakah password yang dimasukkan sama dengan password yang benar
+        if (userInput === correctPassword) {
+            alert("Password benar!");
+        } else {
+            alert("Password salah!");
+        }
+    }
+</script>
+<button onclick="checkPassword()">Cek Password</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+</head>
+<body>
+
+<script>
+    // Fungsi untuk memeriksa nilai dan menampilkan pesan alert
+    function checkGrade() {
+        // Menggunakan prompt untuk meminta pengguna memasukkan nilai
+        var nilai = prompt("Masukkan nilai Anda:");
+
+        // Mengonversi nilai ke tipe numerik
+        var nilaiNumerik = parseFloat(nilai);
+
+        // Memeriksa apakah nilai kurang dari 80
+        if (nilaiNumerik < 80) {
+            // Menampilkan pesan alert jika nilai kurang dari 80
+            alert("Your grade is B");
+        } else {
+            // Menampilkan pesan alert jika nilai 80 atau lebih
+            alert("Your grade is A or higher");
+        }
+    }
+</script>
+
+<!-- Memanggil fungsi checkGrade saat tombol ditekan -->
+<button onclick="checkGrade()">Check Grade</button>
+
+</body>
+</html>
