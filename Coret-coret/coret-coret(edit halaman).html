@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Biodata</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    #biodataContainer {
+        max-width: 400px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Edit Biodata</h2>
+
+<form id="biodataForm">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama" required><br>
+
+    <label for="umur">Umur:</label>
+    <input type="text" id="umur" name="umur" required><br>
+
+    <label for="alamat">Alamat:</label>
+    <input type="text" id="alamat" name="alamat" required><br>
+
+    <input type="submit" value="Simpan">
+</form>
+
+<div id="biodataContainer"></div>
+
+<script>
+    document.getElementById('biodataForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah form dari pengiriman
+
+        // Ambil nilai dari form
+        let nama = document.getElementById('nama').value;
+        let umur = document.getElementById('umur').value;
+        let alamat = document.getElementById('alamat').value;
+
+        // Simpan nilai form ke dalam objek
+        let biodata = {
+            nama: nama,
+            umur: umur,
+            alamat: alamat
+        };
+
+        // Tampilkan pesan biodata telah disimpan
+        alert('Biodata telah disimpan.');
+
+        // Reset form
+        document.getElementById('biodataForm').reset();
+
+        // Tampilkan biodata
+        displayBiodata(biodata);
+    });
+
+    function displayBiodata(biodata) {
+        let biodataContainer = document.getElementById('biodataContainer');
+        biodataContainer.innerHTML = ''; // Kosongkan isi sebelumnya
+
+        // Tambahkan biodata ke dalam container
+        biodataContainer.innerHTML += `
+            <h3>Biodata:</h3>
+            <p><strong>Nama:</strong> ${biodata.nama}</p>
+            <p><strong>Umur:</strong> ${biodata.umur}</p>
+            <p><strong>Alamat:</strong> ${biodata.alamat}</p>
+            <button onclick="editBiodata()">Edit</button>
+        `;
+    }
+
+    function editBiodata() {
+        let biodataContainer = document.getElementById('biodataContainer');
+
+        // Ambil nilai biodata yang telah ditampilkan
+        let nama = biodataContainer.querySelector('p:nth-of-type(1)').innerText.split(':')[1].trim();
+        let umur = biodataContainer.querySelector('p:nth-of-type(2)').innerText.split(':')[1].trim();
+        let alamat = biodataContainer.querySelector('p:nth-of-type(3)').innerText.split(':')[1].trim();
+
+        // Isi kembali form dengan nilai biodata yang telah ditampilkan
+        document.getElementById('nama').value = nama;
+        document.getElementById('umur').value = umur;
+        document.getElementById('alamat').value = alamat;
+
+        // Hapus biodata yang telah ditampilkan
+        biodataContainer.innerHTML = '';
+    }
+</script>
+
+</body>
+</html>

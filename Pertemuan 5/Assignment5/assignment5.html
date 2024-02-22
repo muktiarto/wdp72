@@ -42,7 +42,7 @@
 
             <div class="kolom2">
                 <h1 id="jeneng">Nama Anda</h1>
-                <p1>Front End Designer</p1>
+                <p1 id="profesi">Front End Designer</p1>
                 <div class="all-kotak">
                     <button onclick="gantikonten()">Edit</button>
                     <div class="kotak2">
@@ -67,11 +67,11 @@
 
             <div>
                 <ul>
-                    <li class="kolom4">Full Time</li>
-                    <li class="kolom4">17</li>
-                    <li class="kolom4">Jakarta, Indonesia</li>
-                    <li class="kolom4">2</li>
-                    <li class="kolom4">Developer@gmail.com</li>
+                    <li id="ketersediaan" class="kolom4">Full Time</li>
+                    <li id="usia" class="kolom4">17</li>
+                    <li id="daerah" class="kolom4">Jakarta, Indonesia</li>
+                    <li id="experience" class="kolom4">2</li>
+                    <li id="email" class="kolom4">Developer@gmail.com</li>
                 </ul>
             </div>
         </div>
@@ -81,26 +81,32 @@
     <div id="konten2" style="display:none;">
         <div class="form">
             <div class="baris-nama">
-                <h3 class="name">Nama</h3>
-                <input id="input_jeneng" type="text" name="name" placeholder="Masukkan nama anda" />
-                <h3 class="role">Role</h3>
-                <input type="text" name="role" placeholder="Masukkan peran anda" />
-                <h3 class="availability">Availability</h3>
-                <input type="text" name="availability" placeholder="Masukkan status anda" />
-                <h3 class="age">Age</h3>
-                <input type="text" name="age" placeholder="Masukkan usia anda" />
-                <h3 class="lokasi">Lokasi</h3>
-                <input type="text" name="lokasi" placeholder="Masukkan lokasi anda" />
-                <h3 class="tahun">Years Experience</h3>
-                <input type="text" name="tahun" placeholder="Masukkan tahun pengalaman anda" />
-                <h3 class="email">Email</h3>
-                <input type="text" name="email" placeholder="Masukkan email anda" />
+                <h3>Nama</h3>
+                <input id="input_jeneng" type="text" placeholder="Masukkan nama anda" />
+
+                <h3>Role</h3>
+                <input id="input_profesi" type="text" placeholder="Masukkan peran anda" />
+
+                <h3>Availability</h3>
+                <input id="input_ketersediaan" type="text" placeholder="Masukkan ketersediaan anda" />
+
+                <h3>Age</h3>
+                <input id="input_usia" type="text" placeholder="Masukkan usia anda" />
+
+                <h3>Lokasi</h3>
+                <input id="input_daerah" type="text" placeholder="Masukkan lokasi anda" />
+
+                <h3>Years Experience</h3>
+                <input id="input_experience" type="text" placeholder="Masukkan tahun pengalaman anda" />
+
+                <h3>Email</h3>
+                <input  id="input_email" type="text" placeholder="Masukkan email anda" />
+
             </div>
 
             <div id="submit">
                 <button onclick="simpan()"><h4>SUBMIT</h4></button>
             </div>
-        <button onclick="ganti()">Edit</button>
         </div>
         <br>
         <button onclick="kembali()"><h4>KEMBALI</h4></button>
@@ -130,19 +136,41 @@
             konten2.style.display = "none";
         }
 
-        let nama_anda = document.querySelector("jeneng");
-        let masukan_nama = document.querySelector("input_jeneng");
+        let nama_anda = document.querySelector("#jeneng");
+        let masukan_nama = document.querySelector("#input_jeneng");
+        let profesi_anda = document.querySelector("#profesi");
+        let masukan_profesi = document.querySelector("#input_profesi");
+        let ketersediaan_anda = document.querySelector("#ketersediaan");
+        let masukan_ketersediaan = document.querySelector("#input_ketersediaan");
+        let usia_anda = document.querySelector("#usia");
+        let masukan_usia = document.querySelector("#input_usia");
+        let nama_daerah = document.querySelector("#daerah");
+        let masukan_daerah = document.querySelector("#input_daerah");
+        let lama_experience = document.querySelector("#experience");
+        let masukan_experience = document.querySelector("#input_experience");
+        let email_anda = document.querySelector("#email");
+        let masukan_email = document.querySelector("#input_email");
 
-        function ganti()
-        {
-            masukan_nama.value = nama_anda.innerHTML;
-        }
 
         function simpan()
         {
             nama_anda.innerHTML = masukan_nama.value;
-        }
+            profesi_anda.innerHTML = masukan_profesi.value;
+            ketersediaan_anda.innerHTML = masukan_ketersediaan.value;
+            usia_anda.innerHTML = masukan_usia.value;
+            nama_daerah.innerHTML = masukan_daerah.value;
+            lama_experience.innerHTML = masukan_experience.value;
+            email_anda.innerHTML = masukan_email.value;
 
+
+            // Auto kembali ke halaman 1 begitu di klik simpan
+            let a = document.getElementById("konten1");
+            let b = document.getElementById("konten2");
+
+            konten1.style.display = "block";
+            konten2.style.display = "none";
+        }
+        
     </script>
 </body>
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coretan edit halaman</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1 id="judul">Judul Konten</h1>
+        <P id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quam. Asperiores, nulla eos alias
+            repellat
+            placeat et sint perferendis porro laboriosam, error iure, aspernatur est beatae sed maiores dolore
+            blanditiis.</P>
+    </div>
+    <button onclick="gantiJudul()">Edit</button>
+    <br>
+    <input type="text" id="inputJudul" value="test" />
+    <br>
+    <button onclick="simpanJudul()">Simpan</button>
+
+
+    <script>
+        const title = document.querySelector("#judul");
+        const inputTitle = document.querySelector("#inputJudul");
+
+        function gantiJudul() {
+            inputTitle.value = title.innerHTML;
+        }
+
+        function simpanJudul() {
+            title.innerHTML = inputTitle.value;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,26 +1,23 @@
-*,html
-{
+*,
+html {
     margin: 0;
     padding: 0;
 }
 
-body
-{
+body {
     background-color: grey;
 }
 
 /* NAVBAR */
 
-.navbar
-{
+.navbar {
     background-color: #fff;
     width: 100%;
     height: 70%;
     /* Kenapa pas diganti satuannya jadi px berbeda dengan persen?kalau diganti persen natap garis bawahnya */
 }
 
-.ul-navbar
-{
+.ul-navbar {
     display: flex;
     height: 40px;
     justify-content: right;
@@ -28,28 +25,24 @@ body
     /* Diedit align item yang lain kok gk ngaruh ya ? */
 }
 
-.li-navbar
-{
+.li-navbar {
     list-style-type: none;
     padding: 10px;
 }
 
-.li-navbar:hover
-{
+.li-navbar:hover {
 
     background-color: blanchedalmond;
     transition: .3s ease-in-out;
     transition-delay: .3s;
 }
 
-.a-navbar
-{
+.a-navbar {
     color: black;
     text-decoration: none;
 }
 
-.konten-total
-{
+.konten-total {
     display: flex;
     background-color: antiquewhite;
     margin: 20px;
@@ -59,28 +52,24 @@ body
 
 /* KOLOM 1 */
 
-.kolom1
-{
+.kolom1 {
     width: 100px;
     height: 100px;
     margin: 0px 20px 0px 50px;
-/* Diedit hight nya kok gk ngaruh ya gambarnya ? */
+    /* Diedit hight nya kok gk ngaruh ya gambarnya ? */
 }
 
 /* KOLOM 2 */
 
-.kolom2
-{
+.kolom2 {
     margin: 0px 200px 0px 30px;
 }
 
-.all-kotak
-{
+.all-kotak {
     display: flex;
 }
 
-#kotak1
-{
+#kotak1 {
     width: 60px;
     height: 43px;
     color: white;
@@ -90,16 +79,14 @@ body
     margin: 10px 10px 10px 0px;
 }
 
-.Contact
-{
+/* .Contact {
     color: white;
     padding: 10px;
 
-}
+} */
 
 
-.kotak1:hover
-{
+.kotak1:hover {
     background-color: black;
     transition: .3s ease-in-out;
     transition-delay: .3s;
@@ -107,13 +94,11 @@ body
     border-radius: 8px;
 }
 
-.link-contact
-{
+.link-contact {
     text-decoration: none;
 }
 
-.kotak2
-{
+.kotak2 {
     width: 50px;
     height: 20px;
     background-color: #fff;
@@ -122,44 +107,45 @@ body
     margin: 10px 10px 10px 0px;
 }
 
-.Resume
-{
+.Resume {
     color: #22923c;
 }
 
 /* KOLOM 3 */
 
-.kolom3
-{
+
+.kolom3 {
     list-style-type: none;
     padding: 2px;
     margin: 0px 30px 0px 30px;
 }
 
-.kolom4
-{
+#ketersediaan {
+    list-style-type: none;
+    padding: 2px;
+}
+
+
+.kolom4 {
     list-style-type: none;
     padding: 2px;
 
 }
 
-.form
-{
+.form {
     background-color: white;
     margin: 20px;
     border-radius: 8px;
     padding: 8px;
 }
 
-.baris-nama h3
-{
+.baris-nama h3 {
     font-size: 20px;
     padding: 8px;
 }
 
 
-.baris-nama input
-{ 
+.baris-nama input {
     width: 95%;
     height: 25px;
     margin: 5px 0px 10px 0px;
@@ -168,8 +154,7 @@ body
     outline: none;
 }
 
-#submit
-{
+#submit {
     font-size: 15px;
     background-color: green;
     display: flex;
@@ -180,13 +165,14 @@ body
     border-radius: 2px;
 }
 
-.button {
-    background-color: #04AA6D; /* Green */
-    border: none;
+/* .button {
+    background-color: #04AA6D;
+    /* Green */
+    /* border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-  }
+} */ 
