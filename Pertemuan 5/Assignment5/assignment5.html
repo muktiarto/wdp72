@@ -41,14 +41,10 @@
             <!-- KOLOM 2 -->
 
             <div class="kolom2">
-                <h1>Nama Anda</h1>
+                <h1 id="jeneng">Nama Anda</h1>
                 <p1>Front End Designer</p1>
                 <div class="all-kotak">
-                    <a href="kontak.html" target="_blank" class="link-contact">
-                        <div class="kotak1">
-                            <p1 onclick="gantikonten()" class="Contact">Edit</p1>
-                        </div>
-                    </a>
+                    <button onclick="gantikonten()">Edit</button>
                     <div class="kotak2">
                         <p1 class="Resume">Resume</p1>
                     </div>
@@ -82,11 +78,11 @@
     </div>
     <!-- KONTEN -->
 
-    <div id="konten2">
+    <div id="konten2" style="display:none;">
         <div class="form">
             <div class="baris-nama">
                 <h3 class="name">Nama</h3>
-                <input type="text" name="name" placeholder="Masukkan nama anda" />
+                <input id="input_jeneng" type="text" name="name" placeholder="Masukkan nama anda" />
                 <h3 class="role">Role</h3>
                 <input type="text" name="role" placeholder="Masukkan peran anda" />
                 <h3 class="availability">Availability</h3>
@@ -102,20 +98,51 @@
             </div>
 
             <div id="submit">
-                <h4>SUBMIT</h4>
+                <button onclick="simpan()"><h4>SUBMIT</h4></button>
             </div>
+        <button onclick="ganti()">Edit</button>
         </div>
+        <br>
+        <button onclick="kembali()"><h4>KEMBALI</h4></button>
     </div>
 
-<!-- SCRIPT -->
+    <!-- SCRIPT -->
 
     <script>
 
         function gantikonten() 
         {
-            document.getElementById('konten1').innerHTML='konten2'
+            //Memperoleh Elemen 1 dan Elemen 2
+            let a = document.getElementById("konten1");
+            let b = document.getElementById("konten2");
+
+            //CSS untuk menampilkan halaman 2 dan menyembunyikan halaman 1
+            konten1.style.display = "none";
+            konten2.style.display = "block";
         }
-        
+
+        function kembali()
+        {
+            let a = document.getElementById("konten1");
+            let b = document.getElementById("konten2");
+
+            konten1.style.display = "block";
+            konten2.style.display = "none";
+        }
+
+        let nama_anda = document.querySelector("jeneng");
+        let masukan_nama = document.querySelector("input_jeneng");
+
+        function ganti()
+        {
+            masukan_nama.value = nama_anda.innerHTML;
+        }
+
+        function simpan()
+        {
+            nama_anda.innerHTML = masukan_nama.value;
+        }
+
     </script>
 </body>
 

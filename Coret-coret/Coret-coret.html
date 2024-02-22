@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coret-coret</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contoh Mengedit Halaman HTML dengan DOM</title>
 </head>
-
 <body>
-    <button onclick="demo">Klik</button>
 
+<!-- Halaman 1 -->
+<div id="halaman1">
+    <h1>Halaman 1</h1>
+    <p>Ini adalah konten halaman 1.</p>
+    <button onclick="ubahKeHalaman2()">Ubah ke Halaman 2</button>
+</div>
 
-    <script>
-        function toCelcius(fahrenheit)
-        {
-            return (5/9)*(fahrenheit-32);
-        }
-        document.getElementById("demo").innerHTML=toCelcius;
-    </script>
+<!-- Halaman 2 (awalnya tersembunyi) -->
+<div id="halaman2" style="display:none;">
+    <h1>Halaman 2</h1>
+    <p>Ini adalah konten halaman 2.</p>
+    <button onclick="kembaliKeHalaman1()">Kembali ke Halaman 1</button>
+</div>
+
+<script>
+function ubahKeHalaman2() {
+    // Mendapatkan elemen halaman 1 dan halaman 2
+    var halaman1 = document.getElementById("halaman1");
+    var halaman2 = document.getElementById("halaman2");
+
+    // Mengubah gaya CSS untuk menampilkan halaman 2 dan menyembunyikan halaman 1
+    halaman1.style.display = "none";
+    halaman2.style.display = "block";
+}
+
+function kembaliKeHalaman1() {
+    // Mendapatkan elemen halaman 1 dan halaman 2
+    var halaman1 = document.getElementById("halaman1");
+    var halaman2 = document.getElementById("halaman2");
+
+    // Mengubah gaya CSS untuk menampilkan halaman 1 dan menyembunyikan halaman 2
+    halaman1.style.display = "block";
+    halaman2.style.display = "none";
+}
+</script>
 
 </body>
-
 </html>
