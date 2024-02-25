@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perulangan untuk Menampilkan Pola OOOOOOOO  OOOO  OOOO</title>
+</head>
+<body>
+    <h2>Polanya:</h2>
+    <div id="pattern"></div>
+
+    <script>
+        var pattern = '';
+
+        for (var i = 1; i <= 3; i++) {
+            // Bagian pertama: OOOOOOOO
+            if (i == 1) {
+                for (var j = 0; j < 8; j++) {
+                    pattern += 'O';
+                }
+            }
+
+            // Spasi antara pola
+            pattern += '  ';
+
+            // Bagian kedua dan ketiga: OOOO
+            if (i == 2 || i == 3) {
+                for (var k = 0; k < 4; k++) {
+                    pattern += 'O';
+                }
+            }
+        }
+
+        document.getElementById('pattern').innerText = pattern;
+    </script>
+</body>
+</html>
