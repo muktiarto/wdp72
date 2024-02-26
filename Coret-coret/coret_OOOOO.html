@@ -3,35 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perulangan untuk Menampilkan Pola OOOOOOOO  OOOO  OOOO</title>
+<title>Perulangan untuk Menampilkan Pola OOOOOOOO  OOOO  OOOO di Console</title>
 </head>
 <body>
-    <h2>Polanya:</h2>
-    <div id="pattern"></div>
-
     <script>
-        var pattern = '';
-
         for (var i = 1; i <= 3; i++) {
             // Bagian pertama: OOOOOOOO
             if (i == 1) {
+                var row1 = '';
                 for (var j = 0; j < 8; j++) {
-                    pattern += 'O';
+                    row1 += 'O';
                 }
+                console.log(row1);
             }
-
-            // Spasi antara pola
-            pattern += '  ';
 
             // Bagian kedua dan ketiga: OOOO
             if (i == 2 || i == 3) {
+                var row2 = '';
                 for (var k = 0; k < 4; k++) {
-                    pattern += 'O';
+                    row2 += 'O';
                 }
+                console.log(row2);
             }
         }
-
-        document.getElementById('pattern').innerText = pattern;
     </script>
 </body>
 </html>
