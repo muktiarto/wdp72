@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Ganjil</title>
+</head>
+<body>
+
+<div id="konten1">
+    <p1>Masukan start angka ganjil</p1>
+    <form>
+        <h1>Angka :</h1>
+        <input id="masukan_nomor" placeholder="Masukkan start angka ganjil"/>
+        <button onclick="fungsi()">Generate Urutan</button>
+    </form>
+</div>
+
+<div id="konten2">
+    <br>
+    <p1>Hasil Generate Angka :</p1>
+    <h1 id="nomor"></h1>
+    
+</div>
+
+    <script>
+    function fungsi()
+{
+    //Mengambil elemen ID di html
+    let a = document.getElementById("konten1");
+    let b = document.getElementById("konten2");
+    //Mengambil variable input dan hasil input
+    let no = document.querySelector("#nomor");
+    let masukan_no = document.querySelector("#masukan_nomor");
+
+    {
+        for (masukan_no=1;masukan_no<10;masukan_no+=2)
+        {
+            console.log("Saya orang ke " + masukan_no)
+        }
+    }
+}
+    </script>
+
+</body>
+</html>
