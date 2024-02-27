@@ -33,7 +33,7 @@ body {
 .li-navbar:hover {
 
     background-color: blanchedalmond;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
     transition-delay: .3s;
 }
 
@@ -83,7 +83,7 @@ body {
 #tombol1:hover {
     background-color: black;
     transition: .3s ease-in-out;
-    transition-delay: .3s;
+    transition-delay: .2s;
     border: 2px solid black;
     border-radius: 8px;
 }
@@ -163,6 +163,15 @@ body {
     margin: 0px 0px 10px 0px;
 }
 
+#submit:hover {
+    background-color: red;
+    color: black;
+    transition: .2s ease-in-out;
+    transition-delay: .3s;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
 #mbalek
  {
     font-size: 15px;
@@ -175,4 +184,13 @@ body {
     color: white;
     border : 5px solid blue;
     border-radius: 2px;
+}
+
+#mbalek:hover {
+    background-color: yellow;
+    color: black;
+    transition: .3s ease-in-out;
+    transition-delay: .2s;
+    border: 2px solid black;
+    border-radius: 8px;
 }
