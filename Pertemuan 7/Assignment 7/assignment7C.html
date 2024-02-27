@@ -11,34 +11,17 @@
 
     <script>
         var hasil = " ";
-        for (i=0;i<=3;i++)
+        for (i=0;i<=10;i++)
+        // Menampilkan jumlah baris sebanyak "i" kali
         {
-            if (i==1)
-            {
-                for (j=0;j<5;j++)
-                {
-                    hasil += "OO1 ";
-                }
-                console.log(hasil);
-            }
 
-            if (i==2)
+            if (i<10)
             {
-                for (k=0;k<5;k++)
-                {
-                    hasil += "O02 ";
-                }
-                console.log(hasil);
+                // Menampilkan "OO" ke samping sebanyak "j" kali
+                for (j=i;j<10;j++)
+                hasil+= "OOOO ";
             }
-
-            if (i==3)
-            {
-                for (l=0;l<3;l++)
-                {
-                    hasil += "O03 ";
-                }
-                console.log(hasil);
-            }
+            console.log(hasil+i);
 
         }
     </script>
