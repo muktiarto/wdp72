@@ -44,7 +44,7 @@
                 <h1 id="jeneng">Nama Anda</h1>
                 <p1 id="profesi">Front End Designer</p1>
                 <div class="all-kotak">
-                    <button onclick="gantikonten()">Edit</button>
+                    <button id="tombol1" onclick="gantikonten()">Edit</button>
                     <div class="kotak2">
                         <p1 class="Resume">Resume</p1>
                     </div>
@@ -104,12 +104,14 @@
 
             </div>
 
-            <div id="submit">
-                <button onclick="simpan()"><h4>SUBMIT</h4></button>
+            <div>
+                <button id="submit" onclick="simpan()"><h4>SUBMIT</h4></button>
             </div>
+
+            <button id="mbalek" onclick="kembali()"><h4>KEMBALI</h4></button>
         </div>
         <br>
-        <button onclick="kembali()"><h4>KEMBALI</h4></button>
+
     </div>
 
     <!-- SCRIPT -->
@@ -162,13 +164,13 @@
             lama_experience.innerHTML = masukan_experience.value;
             email_anda.innerHTML = masukan_email.value;
 
-
             // Auto kembali ke halaman 1 begitu di klik simpan
             let a = document.getElementById("konten1");
             let b = document.getElementById("konten2");
 
             konten1.style.display = "block";
             konten2.style.display = "none";
+
         }
         
     </script>
