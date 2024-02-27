@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+
+    <h1 id="test"></h1>
+    
+    <script>
+        let animals = ["Singa", "Macan", "Ayam"];
+        let angka = [6, 4, 2, 1, 7, 20, 33, 10];
+
+        angka.sort(function (a, b) { return a - b })
+
+        let person = {
+            name: "Komeng",
+            age: 34,
+            isMarried: true,
+            gender: "Male",
+            skills: ["Javascript", "Git", "HTML"],
+            hobbies: ["Writing", "Cooking"],
+            childs: [
+                {
+                    name: "Jon",
+                    age: 2,
+                },
+                {
+                    name: "Tom",
+                    age: 5,
+                },
+            ],
+        };
+
+        person.name = "Adul"; // Mengubah Nilai
+
+        person.hobbies.push("Coding"); // Menambahkan Data Array di Dalam Object
+
+        person.childs.push({ name: "Martis", age: 0 }); // Menambahkan data object ke dalam array di dalam object
+
+        person.childs[2].gender = "Male"; // Menambahkan properti ke dalam object yang ada di dalam array object
+
+        document.getElementById("test").innerHTML = person.name;
+
+    </script>
+</body>
+
+</html>

@@ -9,11 +9,9 @@
 
 <div id="konten1">
     <p1>Masukan start angka ganjil</p1>
-    <form>
         <h1>Angka :</h1>
         <input id="masukan_nomor" placeholder="Masukkan start angka ganjil"/>
         <button onclick="fungsi()">Generate Urutan</button>
-    </form>
 </div>
 
 <div id="konten2">
@@ -30,15 +28,15 @@
     let a = document.getElementById("konten1");
     let b = document.getElementById("konten2");
     //Mengambil variable input dan hasil input
-    let no = document.querySelector("#nomor");
-    let masukan_no = document.querySelector("#masukan_nomor");
+    let no = document.querySelector("nomor");
+    let masukan_no = document.getElementById("masukan_nomor").value;
+    console.log(masukan_no);
 
-    {
-        for (masukan_no=1;masukan_no<10;masukan_no+=2)
+        for (i=1;i<masukan_no;i+=2)
         {
-            console.log("Saya orang ke " + masukan_no)
+            console.log("Saya orang ke " + i)
         }
-    }
+
 }
     </script>
 
