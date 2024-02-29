@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan sesi 9</title>
+</head>
+<body>
+    
+
+    <script>
+        //Dengan metode for i
+        const harga = [20,4,15,32];
+        let hargaSekarang = [];
+        for (let i=0;i<harga.length;i++)
+        {
+            hargaSekarang.push(harga[i]*2);
+        }
+        console.log(hargaSekarang);
+
+        //Dengan metode map
+        const a = [30,6,33,14];
+        let b = a.map(function(hargaKali)
+        //Dapat disingkat dengan :
+        // let b = a.map((hargaKali)=>hargaKali*2)
+        {
+            return hargaKali*2;
+        })
+        console.log(b);
+
+        //Dengan metode for i
+        const angka = [21,32,60,15,18,19];
+        let c = [];
+        for (let i=0;i<angka.length;i++)
+        {
+            if (angka[i]%2==1)
+            {
+                c.push(angka[i]);
+            }
+        }
+        console.log(c);
+
+        //Dengan metode filter
+        const number = [99,22,33];
+        let ganjil = number.filter(function(bagi)
+        {
+            return bagi%2==1;
+        })
+        console.log(ganjil);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>TESTING</h1>
+
+    <script>
+        let kosong = ""
+        function hapus_spasi1(a)
+        {
+            let ganti = a.replace(/ /g, "");
+            return ganti;
+        }
+
+        function muter(a)
+        {
+            balek = a.split("").reverse().join("");
+            return balek;
+        }
+
+        function enkripsi(a)
+        {
+            let noSpace = hapus_spasi1(a);
+            let fungsi2 = muter(noSpace);
+            return noSpace;
+        }
+
+
+        
+//Example 2 :
+// let originalText = "Geeks for Geeks Portal";
+ 
+//  let removedSpacesText = originalText.replace(/ /g, "");
+//  console.log(removedSpacesText);
+
+    </script>
+</body>
+</html>
