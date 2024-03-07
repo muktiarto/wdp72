@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 10</title>
+</head>
+<body>
+    <script>
+        let a = "Test halo";
+        const b = 12345;
+
+        let panah = ["Jambu","Apel","Pisang","Jeruk","Rambutan"];
+        // console.log(panah);
+        // panah.push("Mangga");
+        // console.log(panah);
+        // panah.shift();        
+        // console.log(panah);
+        // panah.pop();
+        // console.log(panah);
+
+
+
+
+
+        let diri = {
+            nama_depan: "Agus",
+            nama_belakang: "Bengkel",
+            hobi : ["Sapu","Pel","Lari"],
+            angka_favorit:55
+        }
+
+        diri.nama_lengkap = diri.nama_depan + " " + diri.nama_belakang;
+        console.log(diri);
+
+        diri.angka_favorit=8;
+        console.log(diri);
+
+        diri.hobi.push("coding");
+        console.log(diri);
+
+        diri.lulusan="Hacktiv8";
+        console.log(diri);
+
+        let tulisan = [];
+        for (i=0;i<diri.hobi.length;i++)
+        {
+            console.log(diri.hobi[i])
+        }
+        
+        console.log("Kunci :")
+        for (kunci in diri)
+        {
+            console.log(kunci);
+        }
+
+        console.log("OBJEK :")
+        for (objek in diri)
+        {
+            console.log(diri[objek]);
+        }
+
+        console.log("SEMUANYA : ")
+
+        for (let semuanya in diri)
+        {
+            if (diri.hasOwnProperty(semuanya))
+            {
+                console.log(semuanya + " " + diri[semuanya])
+            }
+        }
+
+
+    </script>
+</body>
+</html>

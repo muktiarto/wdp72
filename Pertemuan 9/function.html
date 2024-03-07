@@ -22,13 +22,21 @@
             return balek;
         }
 
+        function updateVowels(a) {
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+            return a.split('').map(x => vowels.indexOf(x.toLowerCase())>=0 ? String.fromCharCode(x.charCodeAt()+1) : x).join('');
+        }
+
         function enkripsi(a)
         {
             let noSpace = hapus_spasi1(a);
             let fungsi2 = muter(noSpace);
+            let ennkrip = updateVowels(a);
             return noSpace;
         }
 
+        
 
         
 //Example 2 :
