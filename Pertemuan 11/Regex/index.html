@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGEX</title>
+</head>
+<body>
+    <script>
+        var a = "Belajar JavaScript";
+        var b = /JavaScript/;
+
+        console.log(b.test(a));
+        console.log(/Belajar/.test(a));
+        console.log(/belajar/.test(a));
+
+        var c = "1 jam sama dengan 60 menit, juga sama dengan 3600 detik";
+        var d = /\d+/;
+
+        console.log(d.exec(c));
+        
+    </script>
+</body>
+</html>

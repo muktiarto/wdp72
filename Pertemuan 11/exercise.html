@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCISE</title>
+</head>
+<body>
+    <script>
+
+        // EXERCISE 1
+        function banding(a,b)
+        {
+            if (b>a)
+            {
+                return b>a;
+            }
+            else if (b<a)
+            {
+                return b<a;
+            }
+            else
+            return "-1";
+        }
+        console.log(banding(5,8));
+        console.log(banding(5,3));
+        console.log(banding(4,4));
+        console.log(banding(3,3));
+        console.log(banding(17,2));
+
+
+        // EXERCISE 2
+        function balik(a)
+        {
+            return a.split("").reverse().join("");
+        }
+        console.log(balik("Hello world and Coders"));
+        console.log(balik("John Doe"));
+        console.log(balik("I am a bookworm"));
+        console.log(balik("Coding is my hobby"));
+        console.log(balik("Super"));
+
+
+        // EXERCISE 3
+        function sortir (a)
+        {
+            return a.split("").sort().join("");
+        }
+        console.log(sortir("halo"));
+        console.log(sortir("qwerty"));
+        console.log(sortir("qwertyuiopasdfghjklzxcvbnm"));
+
+
+        // EXERCISE 4
+        function angka(a)
+        {
+            if (a.length<2)
+            {
+                return false;
+            }
+            else true;
+
+            let selisih = a[1]-a[0];
+
+            for (i=1;i<a.length;i++)
+            {
+                if (a[i]-a[i-1] !== selisih)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        // console.log(angka([2, 4, 6, 8, 10])); // Output: true
+        // console.log(angka([1, 3, 6, 9])); // Output: false
+        // console.log(angka([0, 5, 10, 15])); // Output: true
+
+
+        function kalimat(a)
+        {
+            let huruf1 = false;
+            let huruf2 = false;
+
+            for (i=0;i<a.length;i++)
+            {
+                if(a[i]==='a')
+                {
+                    huruf1=true;
+                    let cekB = a.indexOf('b',i+1);
+                    if (cekB !=-1 && cekB-1===4)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            for (i=0;i<a.length;i++)
+            {
+                if(a[i]='b')
+                {
+                    huruf2=true;
+                    let cekA=a.indexOf('a',i+1);
+                    if (cekA!=-1 && cekA-1===4)
+                    {
+                        return true;
+                    }
+                }
+            }
+        return false;
+        }
+        // console.log(kalimat("lane borrowed"));
+        // console.log(kalimat("I am sick"));
+
+
+        function threeStepsAB(text) {
+            // Define the regular expression pattern
+            var pattern = /a...b|b...a/;
+
+            // Test the string against the pattern
+            return pattern.test(text);
+        }
+        console.log(threeStepsAB("lane borrowed"));
+
+
+        function regeks(a)
+        {
+            var pola = /a...b|b...a/;
+            return pola.test(a);
+        }
+        console.log(regeks("lane borrowed"));
+
+
+        function gcd(number1, number2) {
+            let smaller, gcd;
+
+            if (number1 < number2) { // mencari angka kecil dan besar
+                smaller = number1;
+            } else if(number1 > number2) {
+                smaller = number2;
+            }
+
+            for (let i=1; i <= smaller; i++) {
+                if (number1 % i == 0 && number2 % i == 0) {
+                    gcd = i;
+                }
+            }
+
+            return gcd;
+        }
+        console.log(gcd(12,24));
+
+
+        function prima(x)
+        {
+            // if (x<2)
+            // {
+            //     return false;
+            // }
+            let a = []
+            for (i=2;i<=x;i++)
+            {
+                if (x%i==0)
+                {
+                    a.push(i);
+                }
+            }
+
+            console.log(a.length);
+            if (a.length==1)
+            {
+                return true;
+            }
+
+            else 
+
+            return false;
+
+        }
+        console.log(prima(23)); // Output: true (7 adalah bilangan prima)
+        //24 = 1,2,3,4,6,8,12,24
+    </script>
+</body>
+</html>
