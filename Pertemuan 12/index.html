@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 12</title>
+</head>
+<body>
+    <script>
+        // let urutan = [0,1,2,3,4,5,6,7]
+        // console.log(urutan); //testing
+        // function cari (urutan,angka)
+        // {
+        //     for (i=0;i<urutan.length;i++)
+        //     {
+        //         if(urutan[i] == angka)
+        //         {
+        //             return i;
+        //             // console.log(i);
+        //         }
+        //     }
+        //     return null;
+        // }
+        // //Manggil fungsi
+        // let a = cari(urutan,0);
+        // if (a!==null)
+        // {
+        //     console.log("Angka ketemu",a);
+        // }
+        // else
+        // console.log("Angka tidak ditemukan");
+
+
+        let b = [0,1,2,3,4,5,6,7]; //Total indeks ada 8 indeks di array b
+        console.log(b);  // 1
+        let c = 5;
+        function pencarian(b,c)
+        {
+            let rendah = 0;
+            let tinggi = b.length-1; //Jadi 7 indeks di array b
+            // console.log(tinggi);
+            while(rendah<=tinggi)
+            {
+                let tengah = Math.floor((rendah+tinggi)/2); //Mulai dari 0+7, 7/2 = 3,5
+                console.log(tengah); // 2
+                if (b[tengah]==c)
+                {
+                    console.log(b[tengah]);
+                    return tengah;
+                }
+                else if(b[tengah]<c)
+                {
+                    rendah=tengah+1;
+                }
+                else
+                    tinggi=tengah-1;
+            }
+            return null;
+        }
+        console.log(pencarian(b,c));
+        // //Manggil fungsi
+        // let d = pencarian(b,0);
+        // if (a!==null)
+        // {
+        //     console.log("Angka ketemu",a);
+        // }
+        // else
+        // console.log("Angka tidak ditemukan");
+
+    </script>
+</body>
+</html>
