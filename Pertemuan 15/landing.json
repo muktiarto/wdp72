@@ -1,0 +1,17 @@
+{
+    "home":{
+        "url":"./",
+        "banner":"",
+        "heading":"Ini adalah navbar"
+    },
+    "about":{
+        "url":"./about.html",
+        "banner":"",
+        "heading":"Ini adalah tentang halaman page"
+    },
+    "portofolio":{
+        "url":"./portofolio.html",
+        "banner":"",
+        "heading":"Ini adalah portofolio"
+    }
+}
