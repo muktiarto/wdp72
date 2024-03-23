@@ -1,0 +1,33 @@
+{
+    "home":{
+        "url":"./",
+        "banner":"",
+        "heading":"Ini adalah navbar"
+    },
+    "about":{
+        "url":"./about.html",
+        "banner":"",
+        "heading":"Ini adalah halaman tentang"
+    },
+    "portofolio":{
+        "url":"./portofolio.html",
+        "banner":"",
+        "heading":"Ini adalah halaman portofolio"
+    },
+    "laman":{
+        "url":"./blog.html",
+        "banner":"",
+        "heading":"Ini adalah halaman Blog"
+    },
+    "tim":{
+        "url":"./team.html",
+        "banner":"",
+        "heading":"Ini adalah halaman tim"
+    },
+    "kontak":{
+        "url":"./kontak.html",
+        "banner":"",
+        "heading":"Ini adalah halaman kontak"
+    }
+
+}
