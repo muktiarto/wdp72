@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="search-form" class="d-flex" role="search">
+        <input id="country-input" class="form-control me-2" type="search" placeholder="Masukan negara yang ingin dicek"
+            aria-label="Search">
+        <button id="get-data-btn" class="btn btn-outline-success text-nowrap" type="submit">Get Data</button>
+    </form>
+    <div id="active-cases" class="card" style="height: 350px; width: 200px;">
+        <div class="card-body">
+            <h5 class="card-title">Kasus Aktif</h5>
+            <p class="card-text" id="active-cases-count">-</p>
+        </div>
+    </div>
+    
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const countryInput = document.getElementById('country-input').value;
+
+    // Ambil data statistik sesuai dengan negara yang dimasukkan
+    fetchStatistics(countryInput);
+});
+
+function fetchStatistics(country) {
+    const url = 'https://covid-193.p.rapidapi.com/statistics?country=' + encodeURIComponent(country);
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '064aa781f7msh4a277a49c33755bp193f1ajsne21cb3a49035',
+            'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
+        }
+    };
+
+    fetch(url, options)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Update active cases count
+            const activeCasesElement = document.getElementById('active-cases-count');
+            activeCasesElement.textContent = data.response[0].cases.active;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+    </script>
+</body>
+</html>
